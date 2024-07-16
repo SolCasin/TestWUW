@@ -32,7 +32,7 @@ async function updateUI() {
 
     const priceTotal = await contract.methods.ticketPrice().call();
     //priceTotal = priceTotal/10;
-    document.getElementById('price').innerText = priceTotal/(10**9);
+    document.getElementById('price').innerText = priceTotal/(10**18);
     
 }
 
