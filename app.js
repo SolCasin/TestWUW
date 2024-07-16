@@ -30,9 +30,9 @@ async function updateUI() {
     const yourTickets = await contract.methods.ticketsOwnedBy(account).call();
     document.getElementById('yourTickets').innerText = yourTickets;
 
-    const yourTickets = await contract.methods.ticketPrice().call();
-    yourTickets = yourTickets / 10**9;
-    document.getElementById('yourTickets').innerText = yourTickets;
+    const priceTotal = await contract.methods.ticketPrice().call();
+    priceTotal = priceTotal / 10**9;
+    document.getElementById('price').innerText = priceTotal;
     
 }
 
